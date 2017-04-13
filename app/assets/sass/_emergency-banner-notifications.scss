@@ -1,59 +1,3 @@
-#emergency-banner-notification {
-  background-color: $panel-colour;
-  border-top: 2px solid white;
-  padding: 0.5em 1em;
-
-  @include media(tablet) {
-    padding: 0;
-  }
-
-  div {
-    @include core-19;
-    color: #fff;
-    margin: 0 auto;
-    padding:0.5em 0;
-    max-width: 1020px;
-    overflow: hidden;
-
-    @include ie-lte(7) {
-      width: 956px;
-    }
-  }
-
-  p {
-    padding: 0;
-    margin: 0;
-
-    @include media(tablet) {
-      padding: 0 30px 0 30px;
-    }
-  }
-
-  a {
-    color: #fff;
-
-    &.more-information {
-      display: block;
-
-      @include media(tablet) {
-        padding: 0 30px;
-      }
-    }
-  }
-
-  &.green {
-    background: #28a197;
-  }
-
-  &.red {
-    background: #b10e1e;
-  }
-
-  &.black {
-    background: #000000;
-  }
-}
-
 @mixin campaign-styles($background, $foreground) {
   background: $background;
 
@@ -64,7 +8,38 @@
   }
 }
 
-#campaign {
+#emergency-banner-notification {
+  @extend %outdent-to-full-width;
+  @extend %contain-floats;
+
+  background-color: $panel-colour;
+  border-top: 2px solid white;
+  padding: $gutter-half;
+
+  @include media(tablet) {
+    padding: $gutter;
+  }
+
+  h1 {
+    @include bold-24;
+    @include media(tablet) {
+      margin-bottom: $gutter-two-thirds;
+    }
+  }
+
+  p {
+    @include core-19;
+    color: $white;
+
+    @include media(tablet) {
+      width: percentage(2/3);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &.black {
     @include campaign-styles($black, $white);
   }
@@ -76,38 +51,50 @@
   &.green {
     @include campaign-styles($turquoise, $white);
   }
+}
+
+#campaign {
+  @extend %outdent-to-full-width;
+  @extend %contain-floats;
 
   border: 5px solid $white;
   border-width: 5px 0;
 
-  .campaign-inner {
-    @extend %contain-floats;
-    @extend %site-width-container;
-    position: relative;
-    padding: 15px 0;
+  padding: $gutter-half;
 
-    h1 {
-      @include bold-48;
+  @include media(tablet) {
+    padding: $gutter;
+  }
+
+  h1 {
+    @include bold-48;
+    @include media(tablet) {
+      margin-bottom: $gutter-two-thirds;
+    }
+  }
+
+  p {
+    @include core-19;
+    color: $white;
+
+    @include media(tablet) {
+      width: percentage(2/3);
     }
 
-    p {
-      @include media(tablet) {
-        width: 66.66%; // this is the same as .welcome-text
-        float: left;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    a {
-      // this is the same as .content-links
-      @include media(tablet) {
-        position: absolute;
-        bottom: 1em;
-        left: 66.66%;
-        width: 33.33%;
-        padding: 0 10px;
-        display: block;
-      }
-      @include core-19;
-    }
+  &.black {
+    @include campaign-styles($black, $white);
+  }
+
+  &.red {
+    @include campaign-styles($red, $white);
+  }
+
+  &.green {
+    @include campaign-styles($turquoise, $white);
   }
 }
