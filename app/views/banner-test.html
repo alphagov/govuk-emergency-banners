@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% import "_homepage_emergency_banner.html" as homepage_banner %}
 {% import "_emergency_banner.html" as banner %}
 
 {% block content %}
@@ -7,7 +6,8 @@
     <h1 class="heading-large">Homepage banners</h1>
 
     <h2 class="heading-medium">National emergency banner</h2>
-    {{ homepage_banner.emergency_banner(
+    {{ banner.emergency_banner(
+        true,
         "red",
         "London security incident",
         "There has been a major incident in central London. Public transport is suspended in Zone 1.",
@@ -16,7 +16,8 @@
     }}
 
     <h2 class="heading-medium">Local emergency banner</h2>
-    {{ homepage_banner.emergency_banner(
+    {{ banner.emergency_banner(
+        true,
         "green",
         "Flooding in south west England",
         "There are severe floods and storms across the south west of England. The M5 motorway is closed.",
@@ -25,7 +26,8 @@
     }}
 
     <h2 class="heading-medium">Notable death</h2>
-    {{ homepage_banner.emergency_banner(
+    {{ banner.emergency_banner(
+        true,
         "black",
         "Richard II",
         "6 January 1367 to 14 February 1400.",
@@ -37,6 +39,7 @@
 
     <h2 class="heading-medium">National emergency banner</h2>
     {{ banner.emergency_banner(
+        false,
         "red",
         "London security incident",
         "Get more information about the London security alert",
@@ -46,6 +49,7 @@
 
     <h2 class="heading-medium">Local emergency banner</h2>
     {{ banner.emergency_banner(
+        false,
         "green",
         "Flooding in south west England",
         "There are severe floods and storms across the south west of England. The M5 motorway is closed.",
@@ -55,6 +59,7 @@
 
     <h2 class="heading-medium">Notable death</h2>
     {{ banner.emergency_banner(
+        false,
         "black",
         "Richard II",
         "6 January 1367 to 14 February 1400.",

@@ -40,49 +40,12 @@
     }
   }
 
-  &.black {
-    @include campaign-styles($black, $white);
-  }
+  &.homepage {
+    border: 5px solid $white;
+    border-width: 5px 0;
 
-  &.red {
-    @include campaign-styles($red, $white);
-  }
-
-  &.green {
-    @include campaign-styles($turquoise, $white);
-  }
-}
-
-#campaign {
-  @extend %outdent-to-full-width;
-  @extend %contain-floats;
-
-  border: 5px solid $white;
-  border-width: 5px 0;
-
-  padding: $gutter-half;
-
-  @include media(tablet) {
-    padding: $gutter;
-  }
-
-  h1 {
-    @include bold-48;
-    @include media(tablet) {
-      margin-bottom: $gutter-two-thirds;
-    }
-  }
-
-  p {
-    @include core-19;
-    color: $white;
-
-    @include media(tablet) {
-      width: percentage(2/3);
-    }
-
-    &:last-child {
-      margin-bottom: 0;
+    h1 {
+      @include bold-48;
     }
   }
 
