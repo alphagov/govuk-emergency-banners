@@ -1,0 +1,11 @@
+{% macro emergency_banner(campaign_class, heading, short_description, link) %}
+<section id="emergency-banner-notification" class="{{ campaign_class }}">
+  <div>
+    <p>{{ heading }}<br>
+    {{ short_description }}</p>
+    {% if link %}
+      <a href="{{ link }}" class="more-information">More information</a>
+    {% endif %}
+  </div>
+</section>
+{% endmacro %}
