@@ -58,6 +58,6 @@
   }
 
   &.local-emergency {
-    @include campaign-styles($turquoise, $white);
+    @include campaign-styles($red, $white);
   }
 }
