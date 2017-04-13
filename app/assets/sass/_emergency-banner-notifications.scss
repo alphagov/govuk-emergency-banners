@@ -49,15 +49,15 @@
     }
   }
 
-  &.black {
+  &.notable-death {
     @include campaign-styles($black, $white);
   }
 
-  &.red {
+  &.national-emergency {
     @include campaign-styles($red, $white);
   }
 
-  &.green {
+  &.local-emergency {
     @include campaign-styles($turquoise, $white);
   }
 }
