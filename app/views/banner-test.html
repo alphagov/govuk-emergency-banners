@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% import "_homepage_emergency_banner.html" as homepage_banner %}
+{% import "_emergency_banner.html" as banner %}
+
+{% block content %}
+  <main id="content">
+    <h1 class="heading-large">Homepage banners</h1>
+
+    <h2 class="heading-medium">National emergency banner</h2>
+    {{ homepage_banner.emergency_banner(
+        "red",
+        "London security incident",
+        "There has been a major incident in central London. Public transport is suspended in Zone 1.",
+        "Get more information about the London security alert",
+        "https://www.gov.uk/government/topical-events/uk-pavilion-at-astana-expo-2017")
+    }}
+
+    <h2 class="heading-medium">Local emergency banner</h2>
+    {{ homepage_banner.emergency_banner(
+        "green",
+        "Flooding in south west England",
+        "There are severe floods and storms across the south west of England. The M5 motorway is closed.",
+        "Latest information for flooded areas",
+        "https://www.gov.uk/government/news/winter-weather-uk-government-response")
+    }}
+
+    <h2 class="heading-medium">Notable death</h2>
+    {{ homepage_banner.emergency_banner(
+        "black",
+        "Richard II",
+        "6 January 1367 to 14 February 1400.",
+        "More information following the death of the King",
+        "https://www.gov.uk/government/topical-events/autumn-statement-2012")
+    }}
+
+    <h1 class="heading-large">Content banners</h1>
+
+    <h2 class="heading-medium">National emergency banner</h2>
+    {{ banner.emergency_banner(
+        "red",
+        "London security incident",
+        "Get more information about the London security alert",
+        "There has been a major incident in central London. Public transport is suspended in Zone 1.",
+        "https://www.gov.uk/government/topical-events/uk-pavilion-at-astana-expo-2017")
+    }}
+
+    <h2 class="heading-medium">Local emergency banner</h2>
+    {{ banner.emergency_banner(
+        "green",
+        "Flooding in south west England",
+        "There are severe floods and storms across the south west of England. The M5 motorway is closed.",
+        "Latest information for flooded areas",
+        "https://www.gov.uk/government/news/winter-weather-uk-government-response")
+    }}
+
+    <h2 class="heading-medium">Notable death</h2>
+    {{ banner.emergency_banner(
+        "black",
+        "Richard II",
+        "6 January 1367 to 14 February 1400.",
+        "More information following the death of the King",
+        "https://www.gov.uk/government/topical-events/autumn-statement-2012")
+    }}
+
+  </main>
+{% endblock %}

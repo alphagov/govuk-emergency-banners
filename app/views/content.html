@@ -1,0 +1,7 @@
+{% extends "layout_content.html" %}
+{% import "_emergency_banner.html" as banner %}
+
+{% block emergency_banner %}
+  {{ banner.emergency_banner("red", "London security incident", "There has been a major incident in central London. Public transport is suspended in Zone 1.
+", "https://www.gov.uk/government/topical-events/uk-pavilion-at-astana-expo-2017") }}
+{% endblock %}
