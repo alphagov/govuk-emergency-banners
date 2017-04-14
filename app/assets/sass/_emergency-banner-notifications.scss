@@ -20,6 +20,10 @@
     padding: $gutter;
   }
 
+  div {
+    @extend %site-width-container;
+  }
+
   h1 {
     @include bold-24;
     @include media(tablet) {
