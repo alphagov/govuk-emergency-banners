@@ -1,0 +1,13 @@
+{% extends "layout_home.html" %}
+{% import "_emergency_banner.html" as banner %}
+
+{% block emergency_banner %}
+  {{ banner.emergency_banner(
+    true,
+    "notable-death",
+    "Richard II",
+    "6 January 1367 to 14 February 1400.",
+    "More information following the death of the King",
+    "https://www.gov.uk/government/topical-events/autumn-statement-2012")
+  }}
+{% endblock %}
