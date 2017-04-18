@@ -44,22 +44,6 @@
     }
   }
 
-  &.homepage {
-    border: 5px solid $white;
-    border-width: 5px 0;
-
-    h1 {
-      @include bold-48;
-      @include media(tablet) {
-        margin-bottom: $gutter-two-thirds;
-      }
-    }
-
-    p {
-      margin: $gutter-two-thirds 0;
-    }
-  }
-
   &.notable-death {
     @include campaign-styles($black, $white);
   }
@@ -70,5 +54,21 @@
 
   &.local-emergency {
     @include campaign-styles($red, $white);
+  }
+}
+
+.homepage #emergency-banner-notification {
+  border: 5px solid $white;
+  border-width: 5px 0;
+
+  h1 {
+    @include bold-48;
+    @include media(tablet) {
+      margin-bottom: $gutter-two-thirds;
+    }
+  }
+
+  p {
+    margin: $gutter-two-thirds 0;
   }
 }
