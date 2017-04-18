@@ -26,14 +26,14 @@
 
   h1 {
     @include bold-24;
-    @include media(tablet) {
-      margin-bottom: $gutter-two-thirds;
-    }
+    margin-bottom: 0;
   }
 
   p {
     @include core-19;
     color: $white;
+    margin-top: 0;
+    margin-bottom: $gutter-two-thirds;
 
     @include media(tablet) {
       width: percentage(2/3);
@@ -50,6 +50,13 @@
 
     h1 {
       @include bold-48;
+      @include media(tablet) {
+        margin-bottom: $gutter-two-thirds;
+      }
+    }
+
+    p {
+      margin: $gutter-two-thirds 0;
     }
   }
 
