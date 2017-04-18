@@ -9,15 +9,13 @@
 }
 
 #emergency-banner-notification {
-  @extend %outdent-to-full-width;
-  @extend %contain-floats;
 
   background-color: $panel-colour;
   border-top: 2px solid white;
-  padding: $gutter-half;
+  padding: $gutter-half 0;
 
   @include media(tablet) {
-    padding: $gutter;
+    padding: $gutter 0;
   }
 
   div {
@@ -27,6 +25,13 @@
   h1 {
     @include bold-24;
     margin-bottom: 0;
+
+    .homepage & {
+      @include bold-48;
+      @include media(tablet) {
+        margin-bottom: $gutter-two-thirds;
+      }
+    }
   }
 
   p {
@@ -42,6 +47,15 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    .homepage & {
+      margin: $gutter-two-thirds 0;
+    }
+  }
+
+  .homepage & {
+    border: 5px solid $white;
+    border-width: 5px 0;
   }
 
   &.notable-death {
@@ -54,21 +68,5 @@
 
   &.local-emergency {
     @include campaign-styles($red, $white);
-  }
-}
-
-.homepage #emergency-banner-notification {
-  border: 5px solid $white;
-  border-width: 5px 0;
-
-  h1 {
-    @include bold-48;
-    @include media(tablet) {
-      margin-bottom: $gutter-two-thirds;
-    }
-  }
-
-  p {
-    margin: $gutter-two-thirds 0;
   }
 }
