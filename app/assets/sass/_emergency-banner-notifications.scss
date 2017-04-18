@@ -1,17 +1,8 @@
-@mixin campaign-styles($background, $foreground) {
-  background: $background;
-
-  h1,
-  p,
-  a {
-    color: $foreground;
-  }
-}
-
 #emergency-banner-notification {
 
   background-color: $panel-colour;
-  border-top: 2px solid white;
+  color: $white;
+  border-top: 2px solid $white;
   padding: $gutter-half 0;
 
   @include media(tablet) {
@@ -53,20 +44,24 @@
     }
   }
 
+  h1, p, a {
+    color: inherit;
+  }
+
   .homepage & {
     border: 5px solid $white;
     border-width: 5px 0;
   }
 
   &.notable-death {
-    @include campaign-styles($black, $white);
+    background-color: $black;
   }
 
   &.national-emergency {
-    @include campaign-styles($red, $white);
+    background-color: $red;
   }
 
   &.local-emergency {
-    @include campaign-styles($red, $white);
+    background-color: $red;
   }
 }
