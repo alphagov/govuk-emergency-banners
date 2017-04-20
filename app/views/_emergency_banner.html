@@ -1,8 +1,8 @@
 {% macro emergency_banner(campaign_class, heading, short_description, link_text, link) %}
 <div class="govuk-emergency-banner {{ campaign_class }}" role="banner">
   <div>
-    <h1>{{ heading }}</h1>
-    <p>{{ short_description }}</p>
+    <h2>{{ heading }}</h2>
+    {% if short_description %}<p>{{ short_description }}</p>{% endif %}
     {% if link %}
       <p><a href="{{ link }}">{{ link_text }}</a></p>
     {% endif %}
